@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<?import frontend.*?>
+
+<SplitPane dividerPositions="0.7" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.Controller">
+  <items>
+    <MetroScrollPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+      <StackPane prefHeight="150.0" prefWidth="200.0">
+         <children>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="266.0" prefWidth="1486.0" StackPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="74.0" layoutY="17.0" prefHeight="32.0" prefWidth="61.0" text="From:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="258.0" layoutY="18.0" prefHeight="29.0" prefWidth="61.0" text="To:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="toStationBox" layoutX="231.0" layoutY="61.0" prefWidth="150.0" />
+                  <ComboBox fx:id="fromStationBox" layoutX="29.0" layoutY="61.0" prefWidth="150.0" />
+                  <Button layoutX="414.0" layoutY="47.0" mnemonicParsing="false" onAction="#getRoutePressed" prefHeight="52.0" prefWidth="125.0" text="Get Route">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="timeTaken" layoutX="551.0" layoutY="44.0" maxWidth="-Infinity" prefHeight="35.0" prefWidth="444.0">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="plannedStations" layoutX="1118.0" layoutY="41.0" prefHeight="200.0" prefWidth="179.0" visible="false" />
+                  <Label fx:id="yourJourney" layoutX="1133.0" layoutY="6.0" prefHeight="35.0" prefWidth="150.0" text="Your Journey" visible="false">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="startStation" layoutX="551.0" layoutY="117.0" maxWidth="-Infinity" prefHeight="97.0" prefWidth="540.0" wrapText="true">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Lines" alignment="CENTER" contentDisplay="CENTER" layoutX="1353.0" layoutY="6.0" prefHeight="17.0" prefWidth="79.0" text="Lines" visible="false">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="linesList" layoutX="1333.0" layoutY="41.0" prefHeight="200.0" prefWidth="118.0" visible="false" />
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+  </items>
+</SplitPane>
